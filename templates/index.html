@@ -1,0 +1,21 @@
+{%  verbatim %}
+{{ if user   }}
+{%  endverbatim %}
+<a href="/accounts/signup/">Signup</a>
+<a href="/accounts/login/">Login</a>
+<form method="post" action="/accounts/logout/">{% csrf_token %} <a href="/accounts/logout/">Logout</a>
+    <input type="submit">logout</input>
+</form>
+
+
+{{ user }}
+<br/>
+Welcome to the Notifications demo
+
+<a href="send/test1"> Send a message to test1 </a>
+<a href="send/test2"> Send a message to test1 </a>
+<a href="send?to=test1"> Send a message to test1 </a>
+<a href="send?to=test2"> Send a message to test2 </a>
+
+
+{{ messages }}
