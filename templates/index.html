@@ -1,21 +1,42 @@
-{%  verbatim %}
-{{ if user   }}
-{%  endverbatim %}
+<ul>
+    <li>
 <a href="/accounts/signup/">Signup</a>
+    </li>
+    <li>
 <a href="/accounts/login/">Login</a>
-<form method="post" action="/accounts/logout/">{% csrf_token %} <a href="/accounts/logout/">Logout</a>
+    </li>
+    <li>
+        <form method="post" action="/accounts/logout/">{% csrf_token %} <a href="/accounts/logout/">Logout</a>
     <input type="submit">logout</input>
 </form>
 
+    </li>
+</ul>
 
-{{ user }}
+
 <br/>
-Welcome to the Notifications demo
-
-<a href="send/test1"> Send a message to test1 </a>
-<a href="send/test2"> Send a message to test1 </a>
-<a href="send?to=test1"> Send a message to test1 </a>
-<a href="send?to=test2"> Send a message to test2 </a>
+<h4>Hello, {{ user }}! Welcome to the Notifications demo</h4>
 
 
+<br/>
+<h3>Notifications</h3>
+<a href="http://localhost:8000/inbox/notifications/">http://.../inbox/notifications</a><br/>
+<h3>Inbox</h3>
+<iframe width=100% height=200 src="http://localhost:8000/messages/inbox/"></iframe><br/>
+
+<a href="http://localhost:8000/messages/write/"><h3>Write Messages</h3> http://.../messages/write</a><br/>
+
+{% load postman_tags %}
+<hr/>
+{% postman_unread as unread_count %}
+
+{% if unread_count %}
+    You have <strong>{{ unread_count }}</strong> unread messages.
+{% endif %}
+<hr>
 {{ messages }}
+
+
+{%  verbatim %}
+{{ if user   }} (fo' angular)
+{%  endverbatim %}

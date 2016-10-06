@@ -15,12 +15,20 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from YouveGotMail.views import ProfileView, IndexView, send_message
+from YouveGotMail.views import ProfileView, IndexView
+import notifications.urls
 
 urlpatterns = [
     url(r'^accounts/', include('allauth.urls')),
     url(r'accounts/profile', ProfileView.as_view(), name='Profile View'),
     url(r'^$', IndexView.as_view(), name='Index View'),
-    url(r'^send/(\w+)', send_message, name='send View'),
+    # url(r'^send/(\w+)', send_message, name='send View'),
     url(r'^admin/', admin.site.urls),
+
+    # django-postman
+    url(r'^messages/', include('postman.urls', namespace='postman', app_name='postman')),
+    # django-notifications-hq
+    url('^inbox/notifications/', include(notifications.urls, namespace='notifications')),
+
+
 ]
