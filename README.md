@@ -17,8 +17,8 @@ django-notifications-hq for notifications
 
 ## Versions/branches
 
-django-allauth only on master
-with messaging and notifications on Add-Django-Notifictaions
+Authentication, user logins only on master
+\+ messaging and notifications on Add-Django-Notifictaions
 
 
 
