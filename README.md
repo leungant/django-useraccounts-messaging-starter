@@ -3,22 +3,17 @@
 
 Django project with
 
+
 1) Login with self-hosted (email-based) auth and auth via fb, gmail etc, 
 2) User-user messages 
 3) New message notification ability
 
 
-## Modules
-
-django-allauth for allauth 
-postman for messages 
-django-notifications-hq for notifications
-
 
 ## Versions/branches
 
-- Authentication, user logins only on master
-- '+ messaging and notifications on Add-Django-Notifictaions
+- Master    Authentication, user logins only on master
+- Add-Django-Notifictaions    with messaging and notifications
 
 
 
