@@ -13,11 +13,12 @@ Django project with
 ## Versions/branches
 
 - Master    Authentication, user logins only on master
+
 - Add-Django-Notifictaions    with messaging and notifications
 
 
-
+#
 
 ## Motivation
 
-One of the non-profit projects we were working with needed a Django set up that could handle user-user messages and a pollable notification mechanism for those messages. Django is not traditionally developed for a social network style application, but this is an example implementation of how this functionality might be provided. Feel free to use as a base for other projects.
+One of the non-profit projects we were working with needed a Django set up that could handle user-user messages and a pollable notification mechanism for those messages. This is an example implementation of how this functionality might be provided even though this may not be traditionally where Django's main focus has been. Feel free to use as a base for other projects.
