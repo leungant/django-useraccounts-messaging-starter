@@ -5,7 +5,7 @@ Django project with
 
 1) Login with self-hosted (email-based) auth and auth via fb, gmail etc, 
 2) User-user messages 
-3) Notification of receipt of messages through a http endpoint.
+3) New message notification ability
 
 
 ## Modules
@@ -25,4 +25,4 @@ with messaging and notifications on Add-Django-Notifictaions
 
 ## Motivation
 
-One of the non-profit projects we were working with needed a Django set up that could handle user-user messages and a notification mechanism for those messages. Django is not traditionally developed for a social network style application, but this is an example implementation of how this functionality might be provided. Feel free to use as a base for other projects.
+One of the non-profit projects we were working with needed a Django set up that could handle user-user messages and a pollable notification mechanism for those messages. Django is not traditionally developed for a social network style application, but this is an example implementation of how this functionality might be provided. Feel free to use as a base for other projects.
