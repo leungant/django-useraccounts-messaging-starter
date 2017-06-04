@@ -16,10 +16,8 @@ from notifications.signals import notify
 
 
 def send(users=[], label='', extra_context={}):
-    print("send fired")
-
+    # a hook to catch signals for notify
     if label == 'postman_message':
-        print("send in pm fired")
         msg = extra_context['pm_message']
         user = User.objects.get(pk=msg.sender_id)
         notify.send(user, recipient=users[0], verb='New message', description=msg.subject)
