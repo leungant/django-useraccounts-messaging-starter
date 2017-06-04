@@ -1,4 +1,4 @@
-# Django site with user login, messaging and message notifications
+# Description
 
 
 Django project with
